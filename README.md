@@ -3,7 +3,7 @@
 <h3 align="center">NF-e • NFS-e • Automação • Parsing Heurístico • IA Opcional</h3>
 
 <p align="center">
-  <img src="https://tenor.com/pt-BR/view/computer-gif-6612486647819606363" width="600" />
+  <div class="tenor-gif-embed" data-postid="6612486647819606363" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/computer-gif-6612486647819606363">Computer Sticker</a>from <a href="https://tenor.com/search/computer-stickers">Computer Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 </p>
 
 ---
