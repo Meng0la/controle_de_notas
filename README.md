@@ -1,13 +1,9 @@
 
-<!-- ====================================================== -->
-<!--        MÓDULO DE EXTRAÇÃO INTELIGENTE DE NOTAS        -->
-<!-- ====================================================== -->
-
 <h1 align="center">📄 Extração Inteligente de Notas Fiscais</h1>
 <h3 align="center">NF-e • NFS-e • Automação • Parsing Heurístico • IA Opcional</h3>
 
 <p align="center">
-  <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" width="600" />
+  <img src="https://tenor.com/pt-BR/view/computer-gif-6612486647819606363" width="600" />
 </p>
 
 ---
@@ -158,7 +154,3 @@ ui.js             → Interface
 <p align="center">
   <b>Automatize o que é repetitivo. Estruture o que é caótico.</b>
 </p>
-
-<!-- ====================================================== -->
-<!--        README VISUAL COM GIFS E LAYOUT PREMIUM        -->
-<!-- ====================================================== -->
