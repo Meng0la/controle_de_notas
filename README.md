@@ -1,92 +1,50 @@
+<!-- =============================================== --> <!-- GABRIEL MENGUE BARROS --> <!-- =============================================== -->
 
-<!-- =============================================== -->
-<!--               GABRIEL MENGUE BARROS            -->
-<!-- =============================================== -->
+<h1 align="center">🚀 Gabriel Mengue Barros</h1> <h3 align="center">Construtor de Sistemas • Arquiteto de Automação • Desenvolvedor de Inteligência Financeira</h3> <p align="center"> <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=00F7FF&center=true&vCenter=true&width=600&lines=Mentalidade+Automation+First;Sistemas+de+Inteligência+Financeira;Workflows+com+IA;Arquitetura+SaaS+Escalável" /> </p>
+🧠 Sobre Mim
 
-<h1 align="center">🚀 Gabriel Mengue Barros</h1>
-<h3 align="center">Systems Builder • Automation Architect • Financial Intelligence Developer</h3>
+Eu projeto sistemas estruturados e orientados à automação, com foco em inteligência financeira, eficiência operacional e arquitetura digital escalável.
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=00F7FF&center=true&vCenter=true&width=600&lines=Automation+First+Mindset;Financial+Intelligence+Systems;AI+Enhanced+Workflows;Scalable+SaaS+Architecture" />
-</p>
+Minha trajetória combina operações industriais, sistemas administrativos e engenharia de software.
+Construo ferramentas reais para resolver gargalos operacionais reais.
 
----
+🏗️ Especialidades
 
-## 🧠 About Me
+📊 Dashboards Financeiros e Motores de Análise de Dados
 
-I design structured, automation-driven systems focused on financial intelligence, operational efficiency, and scalable digital architecture.
+🤖 Extração Inteligente de Documentos (NF-e / NFS-e)
 
-My journey combines industrial operations, administrative systems, and software engineering.  
-I build real-world tools that solve real operational bottlenecks.
+⚙️ Automação de Processos e Otimização de Fluxos
 
----
+💾 Arquitetura de Persistência Client-Side (IndexedDB)
 
-## 🏗️ Core Expertise
+📈 Lógica Preditiva (Regressão, Projeção, Detecção de Anomalias)
 
-- 📊 Financial Dashboards & Data Analytics Engines  
-- 🤖 AI-assisted Document Parsing (NF-e / NFS-e)  
-- ⚙️ Process Automation & Workflow Optimization  
-- 💾 IndexedDB & Client-Side Persistence Architecture  
-- 📈 Predictive Logic (Regression, Projection, Anomaly Detection)  
-- 🧩 Modular JavaScript Architecture (ES6)  
-- 🐍 Python Systems Development  
+🧩 Arquitetura Modular em JavaScript (ES6)
 
----
+🐍 Desenvolvimento de Sistemas em Python
 
-## 🛠 Tech Stack
+🛠 Stack Tecnológica
+<p> <img src="https://skillicons.dev/icons?i=js,python,nodejs,html,css,git,github" /> </p>
+📈 O Que Eu Construo
 
-<p>
-  <img src="https://skillicons.dev/icons?i=js,python,nodejs,html,css,git,github" />
-</p>
+✔ Sistemas com mentalidade Automation-First
+✔ Plataformas de inteligência financeira
+✔ Motores de normalização e validação de dados
+✔ Arquiteturas front-end prontas para SaaS
+✔ Ferramentas de extração inteligente
+✔ Soluções digitais orientadas a negócio
 
----
+🚀 Foco Atual
 
-## 📈 What I Build
+Sistemas financeiros com IA
 
-✔ Automation-first systems  
-✔ Financial intelligence platforms  
-✔ Data normalization engines  
-✔ SaaS-ready front-end architectures  
-✔ Intelligent extraction tools  
-✔ Business-focused software solutions  
+Desenvolvimento de arquitetura SaaS
 
----
+Produtos de automação escaláveis
 
-## 🚀 Current Focus
+Motores inteligentes de extração e análise de dados
 
-- AI-driven financial systems  
-- SaaS architecture development  
-- Scalable automation products  
-- Intelligent data extraction engines  
-
----
-
-## 🔥 GitHub Stats
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=SEU_USUARIO&show_icons=true&theme=tokyonight" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=SEU_USUARIO&theme=tokyonight" />
-</p>
-
----
-
-## 🌐 Connect With Me
-
-<p>
-  <a href="https://www.linkedin.com/in/SEU_LINKEDIN" target="_blank">LinkedIn</a> |
-  <a href="mailto:SEU_EMAIL">Email</a>
-</p>
-
----
-
-<p align="center">
-  <i>"If it can be optimized, automated, or systematized — I will build it."</i>
-</p>
-
-<!-- =============================================== -->
-<!-- You can customize themes, add GIFs, animations -->
-<!-- Add project showcases, badges and counters     -->
-<!-- =============================================== -->
+🌐 Conecte-se Comigo
+<p> <a href="https://www.linkedin.com/in/gabriel-mengue-barros-b23447268" target="_blank">LinkedIn</a> | <a href="mailto:g.menguebarros@gmail.com">Email</a> </p>
+<p align="center"> <i>"Se pode ser otimizado, automatizado ou sistematizado — eu vou construir."</i> </p> <!-- =============================================== --> <!-- Você pode personalizar temas, adicionar GIFs --> <!-- Inserir showcases de projetos, badges, etc. --> <!-- =============================================== -->
