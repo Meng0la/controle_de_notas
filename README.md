@@ -1,7 +1,9 @@
 
-<h1 align="center">🚀 Gabriel Mengue Barros</h1> <h3 align="center">Construtor de Sistemas • Arquiteto de Automação • Desenvolvedor de Inteligência Financeira</h3> 
-<p align="center"> 
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=00F7FF&center=true&vCenter=true&width=600&lines=Mentalidade+Automation+First;Sistemas+de+Inteligência+Financeira;Workflows+com+IA;Arquitetura+SaaS+Escalável" /> </p>
+<h1 align="center">🚀 Gabriel Mengue Barros</h1> 
+<h3 align="center">Construtor de Sistemas • Arquiteto de Automação • Desenvolvedor de Inteligência Financeira</h3> 
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=00F7FF&center=true&vCenter=true&width=600&lines=Automation+First+Mindset;Financial+Intelligence+Systems;AI+Enhanced+Workflows;Scalable+SaaS+Architecture" />
+</p>
   
 🧠 Sobre Mim
 
