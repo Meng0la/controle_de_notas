@@ -1,0 +1,246 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Controle de Notas Fiscais Pro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@300;400;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-theme="dark">
+  <div class="toast-container" id="toastContainer"></div>
+
+  <div class="tutorial" id="tutorial">
+    <div class="tutorial-card">
+      <h2>Bem-vindo ao Controle de Notas Fiscais Pro</h2>
+      <p class="tutorial-text">Explore uma visão completa do seu faturamento com gráficos, insights e sincronização automática.</p>
+      <p class="tutorial-shortcuts">Atalhos: <span class="shortcut">/</span> busca, <span class="shortcut">N</span> nova NF, <span class="shortcut">?</span> ajuda</p>
+      <button class="btn btn-primary" id="btnCloseTutorial">Começar</button>
+    </div>
+  </div>
+
+  <div class="app-shell" id="appShell">
+    <header class="topbar">
+      <div>
+        <h1>Controle de Notas Fiscais Pro</h1>
+        <p>Gestão premium de NFs, comissões e análises avançadas.</p>
+      </div>
+      <div class="topbar-actions">
+        <div class="chip" id="syncStatus">Sincronizado</div>
+        <button class="toggle" id="btnCompact">Compacto</button>
+        <button class="toggle" id="btnTheme">Tema</button>
+      </div>
+    </header>
+
+    <section class="grid-2">
+      <div class="panel">
+        <h2>Adicionar Nova Nota Fiscal</h2>
+        <div class="quick-import-box">
+          <h3>Importação rápida</h3>
+          <p class="muted">Cole o texto do PDF da NF-e/NFS-e e deixe o sistema sugerir campos automaticamente.</p>
+          <textarea id="pdfText" placeholder="Cole aqui o texto da nota fiscal..."></textarea>
+          <div class="ai-extract-config">
+            <label class="ai-toggle"><input type="checkbox" id="useAiExtract" /> Usar IA para extração (webhook)</label>
+            <input type="url" id="aiWebhookUrl" placeholder="https://seu-backend/api/extrair-nf" />
+          </div>
+          <div class="actions-row wrap">
+            <button type="button" class="btn btn-primary" id="btnExtract">Extrair texto colado</button>
+            <button type="button" class="btn btn-ghost" id="btnUploadExtract">Anexar NF(s)</button>
+            <input type="file" id="pdfFileInput" accept=".pdf,.txt" multiple hidden />
+          </div>
+          <div id="extractStatus" class="extract-status"></div>
+        </div>
+
+        <form id="nfForm">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="numeroNF">Número da NF *</label>
+              <input type="text" id="numeroNF" required />
+            </div>
+            <div class="form-group">
+              <label for="dataEmissao">Data de emissão *</label>
+              <input type="date" id="dataEmissao" required />
+            </div>
+            <div class="form-group">
+              <label for="cliente">Cliente *</label>
+              <input type="text" id="cliente" required />
+            </div>
+            <div class="form-group">
+              <label for="documento">CPF/CNPJ</label>
+              <input type="text" id="documento" placeholder="Somente números" />
+            </div>
+            <div class="form-group">
+              <label for="valor">Valor (R$) *</label>
+              <input type="number" id="valor" step="0.01" min="0" required />
+            </div>
+            <div class="form-group">
+              <label for="descricao">Descrição</label>
+              <input type="text" id="descricao" />
+            </div>
+          </div>
+          <div class="actions-row">
+            <button type="submit" class="btn btn-primary">Adicionar nota fiscal</button>
+            <button type="button" class="btn btn-ghost" id="btnClearForm">Limpar</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="panel">
+        <h2>Configurações rápidas</h2>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="monthlyGoal">Meta mensal (R$)</label>
+            <input type="number" id="monthlyGoal" min="0" step="0.01" placeholder="Ex: 50000" />
+          </div>
+          <div class="form-group">
+            <label for="searchInput">Busca rápida</label>
+            <input type="text" id="searchInput" placeholder="Cliente, NF ou descrição" />
+          </div>
+          <div class="form-group">
+            <label for="filterMonth">Filtrar por mês</label>
+            <select id="filterMonth"><option value="">Todos os meses</option></select>
+          </div>
+          <div class="form-group">
+            <label for="filterYear">Filtrar por ano</label>
+            <select id="filterYear"><option value="">Todos os anos</option></select>
+          </div>
+          <div class="form-group">
+            <label for="startDate">Data inicial</label>
+            <input type="date" id="startDate" />
+          </div>
+          <div class="form-group">
+            <label for="endDate">Data final</label>
+            <input type="date" id="endDate" />
+          </div>
+          <div class="form-group">
+            <label for="minValue">Valor mínimo</label>
+            <input type="number" id="minValue" min="0" step="0.01" placeholder="0,00" />
+          </div>
+          <div class="form-group">
+            <label for="maxValue">Valor máximo</label>
+            <input type="number" id="maxValue" min="0" step="0.01" placeholder="999999,99" />
+          </div>
+        </div>
+
+        <div class="actions-row wrap">
+          <button id="btnExportXlsx" class="btn btn-primary" type="button">Exportar XLSX</button>
+          <button id="btnExportJson" class="btn btn-primary" type="button">Backup JSON</button>
+          <button id="btnImportJson" class="btn btn-primary" type="button">Restaurar backup</button>
+          <input type="file" id="importFile" accept=".json" hidden />
+        </div>
+
+        <div class="goal-wrap">
+          <div class="goal-label">Progresso da meta mensal</div>
+          <div class="goal-track"><div id="goalProgress"></div></div>
+          <div id="goalStatus"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Dashboard financeiro</h2>
+      <div class="summary-cards" id="summaryCards">
+        <div class="card"><h3>Total de notas fiscais</h3><div class="value" id="totalNFs">0</div></div>
+        <div class="card"><h3>Valor total (R$)</h3><div class="value" id="totalValue">R$ 0,00</div></div>
+        <div class="card"><h3>Comissão total (1%)</h3><div class="value" id="totalCommission">R$ 0,00</div></div>
+        <div class="card"><h3>Ticket médio</h3><div class="value" id="avgTicket">R$ 0,00</div></div>
+        <div class="card"><h3>Projeção do mês</h3><div class="value" id="monthProjection">R$ 0,00</div></div>
+        <div class="card">
+          <h3>Indicador mensal</h3>
+          <div class="value" id="growthIndicator">-</div>
+          <div id="badgeContainer" class="badge-row"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Gráficos e visualizações</h2>
+      <div class="charts-grid">
+        <div class="chart-card"><canvas id="lineChart" height="160"></canvas></div>
+        <div class="chart-card"><canvas id="pieChart" height="160"></canvas></div>
+        <div class="chart-card"><canvas id="barChart" height="160"></canvas></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Insights automáticos</h2>
+      <div id="insights" class="insights"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Assistente Financeiro Inteligente</h2>
+      <div id="aiInsights" class="insights"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Notas fiscais</h2>
+      <div id="tableSkeleton" class="skeleton-table hidden">
+        <div class="skeleton-row"></div><div class="skeleton-row"></div><div class="skeleton-row"></div>
+      </div>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th data-sort="numeroNF">Número NF</th>
+              <th data-sort="dataEmissao">Data</th>
+              <th data-sort="cliente">Cliente</th>
+              <th data-sort="documento">CPF/CNPJ</th>
+              <th data-sort="valor">Valor (R$)</th>
+              <th data-sort="comissao">Comissão</th>
+              <th data-sort="descricao">Descrição</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="nfTableBody"><tr><td colspan="8" class="empty-table">Nenhuma nota fiscal cadastrada</td></tr></tbody>
+        </table>
+      </div>
+      <div id="pagination" class="pagination"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Resumo mensal</h2>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Mês/Ano</th>
+              <th>Quantidade de NFs</th>
+              <th>Valor total (R$)</th>
+              <th>Comissão total (R$)</th>
+              <th>Variação ano anterior</th>
+            </tr>
+          </thead>
+          <tbody id="monthlySummaryBody"><tr><td colspan="5" class="empty-table">Nenhum dado disponível</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <div class="modal" id="editModal">
+    <div class="modal-content">
+      <h2>Editar Nota Fiscal</h2>
+      <form id="editForm">
+        <div class="form-grid">
+          <div class="form-group"><label for="editNumeroNF">Número da NF *</label><input type="text" id="editNumeroNF" required /></div>
+          <div class="form-group"><label for="editDataEmissao">Data de emissão *</label><input type="date" id="editDataEmissao" required /></div>
+          <div class="form-group"><label for="editCliente">Cliente *</label><input type="text" id="editCliente" required /></div>
+          <div class="form-group"><label for="editDocumento">CPF/CNPJ</label><input type="text" id="editDocumento" /></div>
+          <div class="form-group"><label for="editValor">Valor (R$) *</label><input type="number" id="editValor" step="0.01" min="0" required /></div>
+          <div class="form-group"><label for="editDescricao">Descrição</label><input type="text" id="editDescricao" /></div>
+        </div>
+        <div class="actions-row">
+          <button type="submit" class="btn btn-primary">Salvar alterações</button>
+          <button type="button" class="btn btn-ghost" id="btnCloseEdit">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
