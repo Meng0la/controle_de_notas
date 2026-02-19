@@ -3,7 +3,7 @@
 <h3 align="center">NF-e • NFS-e • Automação • Parsing Heurístico • IA Opcional</h3>
 
 <p align="center">
-   <img src="https://media1.tenor.com/m/n2n0DGny2q0AAAAC/tec.gif" width="833" height="460.753125" alt="a man is standing in front of a table with a futuristic display on it ." fetchpriority="high" style="max-width: 833px;"> <img src ="https://media1.tenor.com/m/n2n0DGny2q0AAAAC/tec.gif" width="600" />
+   <img src="https://media1.tenor.com/m/n2n0DGny2q0AAAAC/tec.gif" width="833" height="460.753125" alt="a man is standing in front of a table with a futuristic display on it ." fetchpriority="high" style="max-width: 833px;"> />
 </p>
 
 ---
