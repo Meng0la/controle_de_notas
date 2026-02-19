@@ -3,7 +3,7 @@
 <h3 align="center">NF-e • NFS-e • Automação • Parsing Heurístico • IA Opcional</h3>
 
 <p align="center">
-  <img src ="https://tenor.com/pt-BR/view/tec-gif-18644675" width="600" />
+  <img src ="https://media1.tenor.com/m/n2n0DGny2q0AAAAC/tec.gif" width="600" />
 </p>
 
 ---
