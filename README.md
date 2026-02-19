@@ -1,6 +1,8 @@
-<!-- =============================================== --> <!-- GABRIEL MENGUE BARROS --> <!-- =============================================== -->
 
-<h1 align="center">🚀 Gabriel Mengue Barros</h1> <h3 align="center">Construtor de Sistemas • Arquiteto de Automação • Desenvolvedor de Inteligência Financeira</h3> <p align="center"> <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=00F7FF&center=true&vCenter=true&width=600&lines=Mentalidade+Automation+First;Sistemas+de+Inteligência+Financeira;Workflows+com+IA;Arquitetura+SaaS+Escalável" /> </p>
+<h1 align="center">🚀 Gabriel Mengue Barros</h1> <h3 align="center">Construtor de Sistemas • Arquiteto de Automação • Desenvolvedor de Inteligência Financeira</h3> 
+<p align="center"> 
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=00F7FF&center=true&vCenter=true&width=600&lines=Mentalidade+Automation+First;Sistemas+de+Inteligência+Financeira;Workflows+com+IA;Arquitetura+SaaS+Escalável" /> </p>
+  
 🧠 Sobre Mim
 
 Eu projeto sistemas estruturados e orientados à automação, com foco em inteligência financeira, eficiência operacional e arquitetura digital escalável.
@@ -46,5 +48,6 @@ Produtos de automação escaláveis
 Motores inteligentes de extração e análise de dados
 
 🌐 Conecte-se Comigo
-<p> <a href="https://www.linkedin.com/in/gabriel-mengue-barros-b23447268" target="_blank">LinkedIn</a> | <a href="mailto:g.menguebarros@gmail.com">Email</a> </p>
-<p align="center"> <i>"Se pode ser otimizado, automatizado ou sistematizado — eu vou construir."</i> </p> <!-- =============================================== --> <!-- Você pode personalizar temas, adicionar GIFs --> <!-- Inserir showcases de projetos, badges, etc. --> <!-- =============================================== -->
+<p> <a href="https://www.linkedin.com/in/gabriel-mengue-barros-b23447268" target="_blank">LinkedIn</a> | 
+  <a href="mailto:g.menguebarros@gmail.com">Email</a> </p>
+<p align="center"> <i>"Se pode ser otimizado, automatizado ou sistematizado — eu vou construir."</i> </p>
